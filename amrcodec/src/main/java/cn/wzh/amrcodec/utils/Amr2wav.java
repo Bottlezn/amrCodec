@@ -24,7 +24,7 @@ public class Amr2wav {
     private  int sizes[] = {12, 13, 15, 17, 19, 20, 26, 31, 5, 6, 5, 5, 0, 0, 0, 0};
 
 
-    public FileInfo[] convertamr(File input, File output) throws IOException {
+    public FileInfo[] convertAmr(File input, File output) throws IOException {
 
         byte[] header = new byte[6];
         int fileSize = (int) input.length();

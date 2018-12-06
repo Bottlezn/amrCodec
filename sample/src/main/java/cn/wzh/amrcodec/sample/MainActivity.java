@@ -26,11 +26,7 @@ import java.io.DataInputStream;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
 import java.io.IOException;
-import java.io.InputStream;
-import java.lang.reflect.Constructor;
-import java.lang.reflect.Method;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Locale;
@@ -201,7 +197,7 @@ public class MainActivity extends AppCompatActivity {
                         mAmrPath = getAmrFilePath(mWavPath);
                         Wav2Amr wav2Amr = new Wav2Amr();
                         try {
-                            FileInfo[] fileInfos = wav2Amr.convertwav(new File(mWavPath),
+                            FileInfo[] fileInfos = wav2Amr.convertWav(new File(mWavPath),
                                     new File(mAmrPath),
                                     AmrMode.MR475,
                                     RecordConst.SAMPLE_RATE_IN_HZ);

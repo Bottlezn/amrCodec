@@ -31,7 +31,7 @@ public class Wav2Amr {
     }
 
     // amr-nb encoder
-    public FileInfo[] convertwav(File input, File output, AmrMode reqMode, int sampleRateInHz)
+    public FileInfo[] convertWav(File input, File output, AmrMode reqMode, int sampleRateInHz)
             throws InvalidWaveException, IOException {
         FileInfo[] finfor = new FileInfo[2];
         FileInfo wavFile = new FileInfo();

@@ -22,7 +22,7 @@ import static android.media.AudioRecord.ERROR_INVALID_OPERATION;
 /**
  * author: wangzh
  * create: 2018/11/30 15:37
- * description: TODO
+ * description: 可以暂停，重新开始录制pcm文件的管理类，并将pcm文件转换成wav文件
  * version: 1.0
  */
 public class AudioRecordManager {
