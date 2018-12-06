@@ -12,7 +12,7 @@ extern "C" {
  * Method:    initEncAmr
  * Signature: (I)I
  */
-JNIEXPORT jint JNICALL Java_cn_wzh_amrcodec_encoder_AmrEncoder_initEncAmr
+JNIEXPORT jlong JNICALL Java_cn_wzh_amrcodec_encoder_AmrEncoder_initEncAmr
   (JNIEnv *, jclass, jint);
 
 /*

@@ -13,7 +13,7 @@ public class AmrEncoder {
     }
 
 
-    public static native int initEncAmr(int ini);
+    public static native long initEncAmr(int ini);
 
     public static native void exitEncAmr(int encode);
 

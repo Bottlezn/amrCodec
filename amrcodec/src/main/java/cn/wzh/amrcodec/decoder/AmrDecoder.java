@@ -11,7 +11,7 @@ public class AmrDecoder {
         System.loadLibrary("amr-codec");
     }
 
-    public static native int initDecamr();
+    public static native long initDecamr();
 
     public static native void exitDecAmr(int decode);
 

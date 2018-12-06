@@ -9,9 +9,9 @@ import java.io.IOException;
 import cn.wzh.amrcodec.exception.InvalidWaveException;
 
 /**
- * author: internet
+ * author: from internet
  * create: 2018/11/30 11:12
- * description: TODO
+ * description: wav文件的reader
  * version: 1.0
  */
 public class WaveReader {

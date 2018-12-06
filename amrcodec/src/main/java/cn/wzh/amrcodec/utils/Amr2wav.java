@@ -1,6 +1,5 @@
 package cn.wzh.amrcodec.utils;
 
-import android.util.Log;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -21,14 +20,13 @@ public class Amr2wav {
     private static final String TAG = Amr2wav.class.getSimpleName();
 
     /* From WmfDecBytesPerFrame in dec_input_format_tab.cpp */
-    private  int sizes[] = {12, 13, 15, 17, 19, 20, 26, 31, 5, 6, 5, 5, 0, 0, 0, 0};
+    private int sizes[] = {12, 13, 15, 17, 19, 20, 26, 31, 5, 6, 5, 5, 0, 0, 0, 0};
 
 
     public FileInfo[] convertAmr(File input, File output) throws IOException {
 
         byte[] header = new byte[6];
         int fileSize = (int) input.length();
-        Log.w(TAG, "fileSize = " + fileSize);
         FileInfo[] finfor = new FileInfo[2];
         /* amr文件输入信息，这里我们测试的是单声道的文件，文件头开始是“#AMR!/n” */
 
@@ -61,7 +59,7 @@ public class Amr2wav {
             System.out.println("BAD HEADER"); // 检查文件头是否是由#！AMR/n开始的
         }
         // the pointer to the native
-        int mNativeAmrDecoder = AmrDecoder.initDecamr();
+        int mNativeAmrDecoder = (int) AmrDecoder.initDecamr();
         System.out.println("开始创建文件1！");
 
         // 创建WaveWriter对象
@@ -113,7 +111,6 @@ public class Amr2wav {
         wavFile.setFileSize(wav.getBytesWritten() + 44);
         wav.closeWaveFile();
         in.close();
-        Log.i(TAG, "wav文件写完啦");
         AmrDecoder.exitDecAmr(mNativeAmrDecoder);
         return finfor;
 

@@ -1,15 +1,13 @@
 package cn.wzh.amrcodec.utils;
 
-import android.util.Log;
-
 import java.io.BufferedOutputStream;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 
 import cn.wzh.amrcodec.bean.FileInfo;
-import cn.wzh.amrcodec.encoder.AmrMode;
 import cn.wzh.amrcodec.encoder.AmrEncoder;
+import cn.wzh.amrcodec.encoder.AmrMode;
 import cn.wzh.amrcodec.exception.InvalidWaveException;
 import cn.wzh.amrcodec.io.WaveReader;
 
@@ -42,7 +40,6 @@ public class Wav2Amr {
         final int PCM_FRAME_SIZE = (int) (sampleRateInHz * 0.02f);
 
         long fileSize = input.length();
-        Log.i(TAG, "fileSize = " + fileSize);
         wavFile.setFileType("wav");
         wavFile.setFileSize(fileSize);
         //缓存的大小
@@ -57,14 +54,13 @@ public class Wav2Amr {
         wavFile.setSampleRate(wav.getSampleRate());
         wavFile.setBitsPerSample(wav.getPcmFormat());
         wavFile.setChannels(wav.getChannels());
-        Log.i(TAG + "WTF", wav.toString());
         amrFile.setFileType("amr");
         amrFile.setSampleRate(8000);
         amrFile.setBitsPerSample(8);
         amrFile.setChannels(wav.getChannels());
         int dtx = 0;
         // the pointer to the native
-        int mNativeAmrEncoder = AmrEncoder.initEncAmr(dtx);
+        int mNativeAmrEncoder = (int) AmrEncoder.initEncAmr(dtx);
         // write the AMR_HEADER
         mOutStream.write(AMR_HEADER, 0, 6);
         int bytecount = 0;
@@ -79,7 +75,6 @@ public class Wav2Amr {
             readCount = wav.read(speech, inputSize);
             // 跳过有问题的帧
             if (readCount != PCM_FRAME_SIZE) {
-                Log.e(TAG, "READ FILE ERROR!");
                 break;
             }
             int outLength = AmrEncoder.encodeAmr(

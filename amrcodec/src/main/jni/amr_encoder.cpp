@@ -15,10 +15,10 @@ extern "C" {
  * Method:    initEncAmr
  * Signature: (I)I
  */
-JNIEXPORT jint JNICALL Java_cn_wzh_amrcodec_encoder_AmrEncoder_initEncAmr
+JNIEXPORT jlong JNICALL Java_cn_wzh_amrcodec_encoder_AmrEncoder_initEncAmr
   (JNIEnv *env, jclass aClazz, jint dxt){
 	  state = (encoder_state *) Encoder_Interface_init(dxt);
-	  return (jint) state;
+	  return (jlong) state;
   }
 
 /*

@@ -3,7 +3,7 @@ package cn.wzh.amrcodec.exception;
 /**
  * author: internet
  * create: 2018/11/30 11:13
- * description: TODO
+ * description: from internet
  * version: 1.0
  */
 public class InvalidWaveException extends Exception {
@@ -23,7 +23,4 @@ public class InvalidWaveException extends Exception {
         super(cause);
     }
 
-    public InvalidWaveException(String message, Throwable cause, boolean enableSuppression, boolean writableStackTrace) {
-        super(message, cause, enableSuppression, writableStackTrace);
-    }
 }

@@ -13,9 +13,9 @@ extern "C" {
  * Method:    initDecamr
  * Signature: ()I
  */
-JNIEXPORT jint JNICALL Java_cn_wzh_amrcodec_decoder_AmrDecoder_initDecamr
+JNIEXPORT jlong JNICALL Java_cn_wzh_amrcodec_decoder_AmrDecoder_initDecamr
   (JNIEnv *env, jclass aClazz){
-	  return (jint) Decoder_Interface_init();
+	  return (jlong) Decoder_Interface_init();
   }
 
 /*

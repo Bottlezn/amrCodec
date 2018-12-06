@@ -1,5 +1,6 @@
 apply plugin: 'com.android.library'
-
+apply plugin: 'com.novoda.bintray-release'
+apply plugin: 'maven'
 android {
     compileSdkVersion 28
     defaultConfig {
@@ -21,9 +22,23 @@ android {
         }
 
     }
+    lintOptions {
+        abortOnError false
+        warning 'InvalidPackage'
+    }
+
 }
 
 dependencies {
 
 }
 
+publish {
+    repoName = 'codingLab'
+    userOrg = 'wzh'
+    groupId = 'cn.wzh.lab'
+    artifactId = 'amrCodec'
+    publishVersion = '0.0.1'
+    desc = 'A lib for Java ,that was transform wav file into amr file .It was base on opencore-amr.'
+    website = 'https://github.com/Bottlezn/amrCodec'
+}

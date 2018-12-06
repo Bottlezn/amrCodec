@@ -262,8 +262,8 @@ public class AudioRecordManager {
          */
         private void writeFile(byte[] buff, int length) throws IOException {
             for (int i = 0; i < length; i++) {
-                //音量放大，以后优化放大算法.现在默认3倍
-                buff[i] = (byte) (buff[i] * 3);
+                //音量放大，以后优化放大算法.现在默认2倍
+                buff[i] = (byte) (buff[i] * 2);
             }
             this.mFos.write(buff, 0, length);
             this.mFos.flush();
