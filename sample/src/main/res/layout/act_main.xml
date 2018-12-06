@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffffff"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/btnStartRecord"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="startRecord" />
+
+        <Button
+            android:id="@+id/btnPauseRecord"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="pauseRecord" />
+
+        <Button
+            android:id="@+id/btnResumeRecord"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="resumeRecord" />
+
+        <Button
+            android:id="@+id/btnStopRecord"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="stopRecord" />
+
+        <Button
+            android:id="@+id/btnPcm2Wav"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="pcm2Wav" />
+
+        <Button
+            android:id="@+id/btnWav2Amr"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="wav2Amr" />
+
+        <TextView
+            android:id="@+id/tvRecordStatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#fad871"
+            android:padding="10dp"
+            android:textColor="#fa3434"
+            tools:text="录制状态" />
+        <TextView
+            android:id="@+id/tvPcm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#c97afd"
+            android:padding="10dp"
+            android:textColor="#06f4a5"
+            tools:text="录制状态" />
+        <TextView
+            android:id="@+id/tvWav"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#95c3f1"
+            android:padding="10dp"
+            android:textColor="#ffffff"
+            tools:text="源文件信息" />
+
+        <TextView
+            android:id="@+id/tvAmr"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#71ff9c"
+            android:padding="10dp"
+            android:textColor="#333333"
+            tools:text="源文件信息" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <Button
+                android:id="@+id/btnPlayPcm"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:text="playPcm" />
+            <Button
+                android:id="@+id/btnPlayWav"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:text="playWav" />
+
+            <Button
+                android:id="@+id/btnPlayAmr"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:text="playAmr" />
+        </LinearLayout>
+    </LinearLayout>
+
+</android.support.v4.widget.NestedScrollView>
