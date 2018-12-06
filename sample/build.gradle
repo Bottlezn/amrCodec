@@ -1,5 +1,5 @@
 apply plugin: 'com.android.application'
-
+apply plugin: 'maven'
 android {
     compileSdkVersion 26
 
@@ -31,5 +31,6 @@ dependencies {
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
     implementation 'com.jakewharton:butterknife:8.8.1'
     annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
-    implementation project(':amrcodec')
+//    implementation project(':amrcodec')
+    implementation 'cn.wzh.lab:amrCodec:0.0.1'
 }
