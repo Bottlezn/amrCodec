@@ -1,7 +1,7 @@
 **A lib for Java ,that was transform wav file into amr file .It was base on opencore-amr.**
 ## description
 使用opencore-amr编译的库，供java使用。  
-可以将wav文件编译成amr文件，目前只支持采样率为16kHz的wav文件。有时间再编译vo-amrwbenc库添加进去以支持16kHz采样率的wav文件转换
+可以将wav文件编译成amr文件，目前只支持采样率为8kHz的wav文件。有时间再将编译vo-amrwbenc库添加进去以支持16kHz采样率的wav文件转换  
 
 ## sample
 该项目中的sample  
