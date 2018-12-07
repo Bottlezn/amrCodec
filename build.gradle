@@ -5,9 +5,6 @@ buildscript {
     repositories {
         google()
         jcenter()
-        maven{
-            url "https://dl.bintray.com/wzh/codingLab"
-        }
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:3.2.1'
@@ -20,9 +17,6 @@ allprojects {
     repositories {
         google()
         jcenter()
-        maven{
-           url "https://dl.bintray.com/wzh/codingLab"
-        }
     }
     tasks.withType(Javadoc) {
         options.addStringOption('Xdoclint:none', '-quiet')

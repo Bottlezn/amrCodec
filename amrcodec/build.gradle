@@ -38,7 +38,7 @@ publish {
     userOrg = 'wzh'
     groupId = 'cn.wzh.lab'
     artifactId = 'amrCodec'
-    publishVersion = '0.0.1'
+    publishVersion = '0.0.2'
     desc = 'A lib for Java ,that was transform wav file into amr file .It was base on opencore-amr.'
     website = 'https://github.com/Bottlezn/amrCodec'
 }
